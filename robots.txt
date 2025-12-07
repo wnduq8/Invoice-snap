@@ -1,0 +1,11 @@
+# Invoice Snap - robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://invoice-snap.pages.dev/sitemap.xml
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1
+

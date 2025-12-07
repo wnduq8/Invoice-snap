@@ -22,8 +22,13 @@ import { translations } from "./locale";
 import InputField from "./components/InputField";
 
 export default function InvoiceSnap() {
+  const langQuery = (window.location.search.split("lang=")[1]?.toLowerCase() ||
+    "ko") as Lang;
+
+  const [lang, setLang] = useState<Lang>(
+    ["ko", "en", "ja", "zh"].includes(langQuery) ? langQuery : "ko"
+  );
   const [dark, setDark] = useState(false);
-  const [lang, setLang] = useState<Lang>("ko");
   const [showModal, setShowModal] = useState(false);
   const [logo, setLogo] = useState<string | null>(null);
   const [seller, setSeller] = useState<ContactInfo>({
